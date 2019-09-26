@@ -3,7 +3,7 @@
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus):
-    na, nb, nc, nd, ne = 0, 0, 0, 0, 0
+    na, nb, nc, nd, ne, nf = 0, 0, 0, 0, 0, 0
     for sku in skus:
         if 'A' == sku:
             na += 1
@@ -15,6 +15,8 @@ def checkout(skus):
             nd += 1
         elif 'E' == sku:
             ne += 1
+        elif 'F' == sku:
+            nf += 1
         else:
             return -1
     pa = int(na / 5) * 200
@@ -25,7 +27,9 @@ def checkout(skus):
     pe = 40 * ne
     nb = max(0, nb-int(ne/2))
     pb = int(nb / 2) * 45 + (nb % 2) * 30
-    return int(pa + pb + pc + pd + pe)
+    pf = int(nf / 2) * 10 + (nf % 2) * 10
+    return int(pa + pb + pc + pd + pe + pf)
+
 
 
 

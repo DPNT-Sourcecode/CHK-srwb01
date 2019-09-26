@@ -20,5 +20,9 @@ class TestSum(TestCase):
     def test_chk6A(self):
         self.assertEqual(checkout_solution.checkout('AAAAAA'), 250)
 
+    def test_chk2F(self):
+        self.assertEqual(checkout_solution.checkout('FF'), 10)
+
+
 
 
