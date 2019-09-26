@@ -13,9 +13,12 @@ def checkout(skus):
             nc += 1
         elif 'D' == sku:
             nd += 1
+        else:
+            return -1
     pa = int(na / 3) * 130 + (na % 3) * 50
     pb = int(nb / 2) * 45 + (nb % 2) * 30
     pc = 20 * nc
-    pd = 10 * nd
+    pd = 15 * nd
     return pa + pb + pc + pd
+
 
