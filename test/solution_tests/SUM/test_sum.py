@@ -38,5 +38,3 @@ class TestSum(TestCase):
         """ second bigger than bounds """
         with self.assertRaises(ValueError):
             sum_solution.compute(1, 101)
-
-
