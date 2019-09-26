@@ -32,7 +32,3 @@ def checkout(skus):
     pf = 10 * nf
     return int(pa + pb + pc + pd + pe + pf)
 
-
-
-
-
