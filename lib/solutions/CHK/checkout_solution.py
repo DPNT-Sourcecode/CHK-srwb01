@@ -17,11 +17,14 @@ def checkout(skus):
             ne += 1
         else:
             return -1
-    pa = int(na / 3) * 130 + (na % 3) * 50
+    pa = int(na / 5) * 200
+    na %= 5
+    pa += int(na / 3) * 130 + (na % 3) * 50
     pc = 20 * nc
     pd = 15 * nd
     pe = 40 * ne
-    nb = max(0, nb-ne/2)
+    nb = max(0, int(nb-ne/2))
     pb = int(nb / 2) * 45 + (nb % 2) * 30
     return int(pa + pb + pc + pd + pe)
+
 
