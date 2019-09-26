@@ -1,4 +1,4 @@
-from solutions.CHK import checkout
+from solutions.CHK import checkout_solution
 
 from unittest import TestCase
 
@@ -6,5 +6,6 @@ from unittest import TestCase
 class TestSum(TestCase):
 
     def test_chkE(self):
-        self.assertEqual(checkout('BBE'), 85)
+        self.assertEqual(checkout_solution.checkout('BBE'), 85)
+
 
