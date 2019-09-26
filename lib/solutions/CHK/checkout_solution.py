@@ -23,8 +23,9 @@ def checkout(skus):
     pc = 20 * nc
     pd = 15 * nd
     pe = 40 * ne
-    nb = max(0, int(nb-ne/2))
+    nb = max(0, nb-int(ne/2))
     pb = int(nb / 2) * 45 + (nb % 2) * 30
     return int(pa + pb + pc + pd + pe)
+
 
 
