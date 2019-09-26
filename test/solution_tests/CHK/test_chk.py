@@ -12,6 +12,7 @@ class TestSum(TestCase):
         self.assertEqual(checkout_solution.checkout('BBEE'), 110)
 
     def test_chkABCDE(self):
+        import pdb; pdb.set_trace()
         self.assertEqual(checkout_solution.checkout('ABCDE'), 155)
 
     def test_chk5A(self):
@@ -19,4 +20,5 @@ class TestSum(TestCase):
 
     def test_chk6A(self):
         self.assertEqual(checkout_solution.checkout('AAAAAA'), 250)
+
 
