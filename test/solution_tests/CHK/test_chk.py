@@ -21,10 +21,17 @@ class TestSum(TestCase):
         self.assertEqual(checkout_solution.checkout('AAAAAA'), 250)
 
     def test_chk2F(self):
-        self.assertEqual(checkout_solution.checkout('FF'), 10)
+        self.assertEqual(checkout_solution.checkout('FF'), 20)
 
     def test_chk3F(self):
         self.assertEqual(checkout_solution.checkout('FFF'), 20)
+
+    def test_chk4F(self):
+        self.assertEqual(checkout_solution.checkout('FFFF'), 30)
+
+    def test_chk5F(self):
+        self.assertEqual(checkout_solution.checkout('FFFFF'), 40)
+
 
 
 
