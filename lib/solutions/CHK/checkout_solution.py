@@ -25,6 +25,3 @@ def checkout(skus):
     pb = int(nb / 2) * 45 + (nb % 2) * 30
     return int(pa + pb + pc + pd + pe)
 
-
-
-
