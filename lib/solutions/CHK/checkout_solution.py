@@ -37,7 +37,15 @@ def checkout(skus):
     p += sd['K'] * 80
     p += sd['L'] * 90
 
+    p += 40 * sd['N']
+    nm = max(0, sd['M']-int(sd['N']/3))
+    p += int(nm / 3) * 15 + (nb % 2) * 30
+ 
+
+    p += sd['M'] * 15
+
     return int(p)
+
 
 
 
