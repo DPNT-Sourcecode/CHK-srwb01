@@ -13,10 +13,11 @@ def checkout(skus):
         else:
             return -1
 
-    p = int(sd['A'] / 5) * 200
-    sd['A'] %= 5
-    p += int(sd['A'] / 3) * 130 + (sd['A'] % 3) * 50
-    p += 20 * sd['C']
+    na = sd.get('A', 0)
+    p = int(na/5) * 200
+    na %= 5
+    p += int(na/3) * 130 + (na%3) * 50
+    p += 20 * sd.get('C', 0)
     p += 15 * sd['D']
     p += 40 * sd['E']
     nb = max(0, sd['B']-int(sd['E']/2))
@@ -66,7 +67,13 @@ def checkout(skus):
     sd['V'] %= 2
     p += sd['V'] * 50
 
+    p += 20 * sd['W']
+    p += 90 * sd['X']
+    p += 10 * sd['Y']
+    p += 50 * sd['Z']
+
     return int(p)
+
 
 
 
