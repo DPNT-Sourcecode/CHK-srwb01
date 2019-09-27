@@ -40,9 +40,9 @@ def checkout(skus):
     p += sd.get('J', 0) * 60
 
     nk = sd.get('K', 0)
-    p += int(nk/2) * 150
+    p += int(nk/2) * 120
     nk %= 2
-    p += nk * 80
+    p += nk * 70
     p += sd.get('L', 0) * 90
 
     nn = sd.get('N', 0)
@@ -84,11 +84,4 @@ def checkout(skus):
     p += 50 * sd.get('Z', 0)
 
     return int(p)
-
-
-
-
-
-
-
 
