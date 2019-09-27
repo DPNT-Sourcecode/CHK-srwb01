@@ -39,7 +39,7 @@ def checkout(skus):
     p += sd.get('I', 0) * 35
     p += sd.get('J', 0) * 60
 
-    nk = sd.get('K')
+    nk = sd.get('K', 0)
     p += int(nk/2) * 150
     nk %= 2
     p += nk * 80
@@ -64,25 +64,27 @@ def checkout(skus):
     p += int(nq/3) * 80
     p += (nq%3) * 30
     
-    p += 30 * sd['S']
-    p += 20 * sd['T']
+    p += 30 * sd.get('S', 0)
+    p += 20 * sd.get('T', 0)
 
-    fu = int(sd['U'] / 4)
-    nu = max(0, sd['U']-fu)
+    fu = int(sd.get('U', 0) / 4)
+    nu = max(0, sd.get('U', 0)-fu)
     p += 40 * nu
 
-    p += int(sd['V']/3) * 130
-    sd['V'] %= 3
-    p += int(sd['V']/2) * 90
-    sd['V'] %= 2
-    p += sd['V'] * 50
+    nv = sd.get('V', 0)
+    p += int(nv/3) * 130
+    nv %= 3
+    p += int(nv/2) * 90
+    nv %= 2
+    p += nv * 50
 
-    p += 20 * sd['W']
-    p += 90 * sd['X']
-    p += 10 * sd['Y']
-    p += 50 * sd['Z']
+    p += 20 * sd.get('W', 0)
+    p += 90 * sd.get('X', 0)
+    p += 10 * sd.get('Y', 0)
+    p += 50 * sd.get('Z', 0)
 
     return int(p)
+
 
 
 
