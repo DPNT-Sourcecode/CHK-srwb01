@@ -56,7 +56,17 @@ def checkout(skus):
     p += 30 * sd['S']
     p += 20 * sd['T']
 
+    fu = int(sd['U'] / 4)
+    nu = max(0, sd['U']-fu)
+    p += 40 * nu
+
+    p += int(sd['V']/3) * 130
+    sd['V'] %= 3
+    p += int(sd['V']/2) * 90
+    sd['V'] %= 2
+    p += sd['V'] * 50
 
     return int(p)
+
 
 
