@@ -24,7 +24,10 @@ def checkout(skus):
     ff = int(sd['F'] / 3)
     nf = max(0, sd['F']-ff)
     p += 10 * nf
+    p += 20 * sd['G']
+    p += int(sd['H']/10) * 80
     return int(p)
+
 
 
 
