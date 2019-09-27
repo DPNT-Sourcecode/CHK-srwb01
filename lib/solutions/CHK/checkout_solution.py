@@ -18,12 +18,14 @@ def checkout(skus):
     na %= 5
     p += int(na/3) * 130 + (na%3) * 50
     p += 20 * sd.get('C', 0)
-    p += 15 * sd['D']
-    p += 40 * sd['E']
-    nb = max(0, sd['B']-int(sd['E']/2))
+    p += 15 * sd.get('D', 0)
+
+    ne = sd.get('E', 0)
+    p += 40 * ne
+    nb = max(0, sd.get('B', 0)-int(ne/2))
     p += int(nb / 2) * 45 + (nb % 2) * 30
-    ff = int(sd['F'] / 3)
-    nf = max(0, sd['F']-ff)
+    ff = int(sd.get('F', 0) / 3)
+    nf = max(0, sd.get('F', 0)-ff)
     p += 10 * nf
     p += 20 * sd['G']
     p += int(sd['H']/10) * 80
@@ -73,6 +75,7 @@ def checkout(skus):
     p += 50 * sd['Z']
 
     return int(p)
+
 
 
 
