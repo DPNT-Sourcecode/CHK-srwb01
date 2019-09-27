@@ -64,8 +64,6 @@ def checkout(skus):
     p += int(nq/3) * 80
     p += (nq%3) * 30
     
-    p += 30 * sd.get('S', 0)
-    p += 20 * sd.get('T', 0)
 
     fu = int(sd.get('U', 0) / 4)
     nu = max(0, sd.get('U', 0)-fu)
@@ -79,9 +77,13 @@ def checkout(skus):
     p += nv * 50
 
     p += 20 * sd.get('W', 0)
-    p += 90 * sd.get('X', 0)
-    p += 10 * sd.get('Y', 0)
-    p += 50 * sd.get('Z', 0)
+
+    ns = sd.get('S', 0)
+    nt = sd.get('T', 0)
+    nx = sd.get('X', 0)
+    ny = sd.get('Y', 0)
+    nz = sd.get('Z', 0)
 
     return int(p)
+
 
