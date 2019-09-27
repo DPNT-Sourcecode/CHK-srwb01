@@ -38,3 +38,13 @@ class TestSum(TestCase):
     def test_chkST2X(self):
         self.assertEqual(checkout_solution.checkout('STXX'), 65)
 
+    def test_chk3SZ(self):
+        self.assertEqual(checkout_solution.checkout('SSSZ'), 65)
+
+    def test_chk3ZS(self):
+        self.assertEqual(checkout_solution.checkout('ZZZS'), 65)
+
+    def test_chkSTXS(self):
+        self.assertEqual(checkout_solution.checkout('STXS'), 62)
+
+
