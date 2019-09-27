@@ -26,7 +26,19 @@ def checkout(skus):
     p += 10 * nf
     p += 20 * sd['G']
     p += int(sd['H']/10) * 80
+    sd['H'] %= 10
+    p += int(sd['H']/5) * 45
+    sd['H'] %= 5
+    p += sd['H'] * 10
+    p += sd['I'] * 35
+    p += sd['J'] * 60
+    p += int(sd['K']/2) * 150
+    sd['K'] %= 2
+    p += sd['K'] * 80
+    p += sd['L'] * 90
+
     return int(p)
+
 
 
 
