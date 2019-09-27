@@ -36,7 +36,7 @@ class TestSum(TestCase):
         self.assertEqual(checkout_solution.checkout('STX'), 45)
 
     def test_chkST2X(self):
-        self.assertEqual(checkout_solution.checkout('STXX'), 65)
+        self.assertEqual(checkout_solution.checkout('STXX'), 62)
 
     def test_chk3SZ(self):
         self.assertEqual(checkout_solution.checkout('SSSZ'), 65)
@@ -46,5 +46,6 @@ class TestSum(TestCase):
 
     def test_chkSTXS(self):
         self.assertEqual(checkout_solution.checkout('STXS'), 62)
+
 
 
