@@ -47,11 +47,16 @@ def checkout(skus):
     p += sd['P'] * 50
 
     p += sd['R'] * 50
+    fq = int(sd['R']/3)
+    nq = max(0, sd['Q']-fq)
 
-    p += int(sd['Q']/3) * 80
-    sd['Q'] %= 3
-    p += sd['Q'] * 30
+    p += int(nq/3) * 80
+    p += (nq%3) * 30
     
+    p += 30 * sd['S']
+    p += 20 * sd['T']
+
 
     return int(p)
+
 
