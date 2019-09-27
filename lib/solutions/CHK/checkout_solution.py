@@ -46,13 +46,12 @@ def checkout(skus):
     sd['P'] %= 5
     p += sd['P'] * 50
 
+    p += sd['R'] * 50
+
+    p += int(sd['Q']/3) * 80
+    sd['Q'] %= 3
+    p += sd['Q'] * 30
+    
 
     return int(p)
-
-
-
-
-
-
-
 
