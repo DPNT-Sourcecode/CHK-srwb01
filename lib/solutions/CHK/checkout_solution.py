@@ -13,18 +13,19 @@ def checkout(skus):
         else:
             return -1
 
-    pa = int(sd['A'] / 5) * 200
+    p = int(sd['A'] / 5) * 200
     sd['A'] %= 5
-    pa += int(sd['A'] / 3) * 130 + (sd['A'] % 3) * 50
-    pc = 20 * nc
-    pd = 15 * nd
-    pe = 40 * ne
-    nb = max(0, nb-int(ne/2))
-    pb = int(nb / 2) * 45 + (nb % 2) * 30
-    ff = int(nf / 3)
-    nf = max(0, nf-ff)
-    pf = 10 * nf
-    return int(pa + pb + pc + pd + pe + pf)
+    p += int(sd['A'] / 3) * 130 + (sd['A'] % 3) * 50
+    p += 20 * sd['C']
+    p += 15 * sd['D']
+    p += 40 * sd['E']
+    nb = max(0, sd['B']-int(sd['E']/2))
+    p += int(nb / 2) * 45 + (nb % 2) * 30
+    ff = int(sd['F'] / 3)
+    nf = max(0, sd['F']-ff)
+    p += 10 * nf
+    return int(p)
+
 
 
 
