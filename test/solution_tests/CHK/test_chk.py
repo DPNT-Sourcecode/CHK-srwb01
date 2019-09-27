@@ -32,3 +32,10 @@ class TestSum(TestCase):
     def test_chk5F(self):
         self.assertEqual(checkout_solution.checkout('FFFFF'), 40)
 
+    def test_chkSTX(self):
+        self.assertEqual(checkout_solution.checkout('STX'), 45)
+
+    def test_chkST2X(self):
+        self.assertEqual(checkout_solution.checkout('STXX'), 65)
+
+

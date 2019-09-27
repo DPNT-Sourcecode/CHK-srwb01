@@ -89,13 +89,26 @@ def checkout(skus):
     p += (ngrp/3) * 45
     fgrp = ngrp % 3
     if fgrp in (1,2):
-        if nz > 1:
-            p += 21
-        elif 
-    elif fgrp == 2:
-        pass
+        while fgrp > 0:
+            if nz > 0:
+                p += 21
+                nz -= 1
+            elif ny > 0:
+                p += 20
+                ny -= 1
+            elif nt > 0:
+                p += 20
+                nt -= 1
+            elif ns > 0:
+                p += 20
+                ns -= 1
+            elif nx > 0:
+                p += 17
+                nx -= 1
+            fgrp -= 1
 
     return int(p)
+
 
 
 
