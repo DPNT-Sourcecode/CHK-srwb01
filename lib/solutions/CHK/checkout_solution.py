@@ -84,9 +84,19 @@ def checkout(skus):
     ny = sd.get('Y', 0)
     nz = sd.get('Z', 0)
 
-    # cut lowest priced first then others
+    # cut lowest priced first then others (XSTYZ)
+    ngrp = ns + nt + nx + ny + nz
+    p += (ngrp/3) * 45
+    fgrp = ngrp % 3
+    if fgrp in (1,2):
+        if nz > 1:
+            p += 21
+        elif 
+    elif fgrp == 2:
+        pass
 
     return int(p)
+
 
 
 
