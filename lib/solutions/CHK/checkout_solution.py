@@ -84,14 +84,15 @@ def checkout(skus):
     ny = sd.get('Y', 0)
     nz = sd.get('Z', 0)
 
-    # cut lowest priced first then others (XSTYZ)
+    # it was cut highest priced first then others (ZSTYX)
+    # actually I could not get the exact criteria from the specs :(
     ngrp = ns + nt + nx + ny + nz
     p += int(ngrp/3) * 45
     fgrp = ngrp % 3
     while fgrp > 0:
-        if nz > 0:
-            p += 21
-            nz -= 1
+        if nx > 0:
+            p += 17
+            nx -= 1
         elif ny > 0:
             p += 20
             ny -= 1
@@ -101,15 +102,10 @@ def checkout(skus):
         elif ns > 0:
             p += 20
             ns -= 1
-        elif nx > 0:
-            p += 17
-            nx -= 1
+        elif nz > 0:
+            p += 21
+            nz -= 1
         fgrp -= 1
 
     return int(p)
-
-
-
-
-
 
