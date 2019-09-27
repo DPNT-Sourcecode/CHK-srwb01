@@ -84,6 +84,9 @@ def checkout(skus):
     ny = sd.get('Y', 0)
     nz = sd.get('Z', 0)
 
+    # cut lowest priced first then others
+
     return int(p)
+
 
 
