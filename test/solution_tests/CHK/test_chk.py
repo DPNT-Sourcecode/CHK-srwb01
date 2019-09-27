@@ -36,6 +36,8 @@ class TestSum(TestCase):
         self.assertEqual(checkout_solution.checkout('STX'), 45)
 
     def test_chkST2X(self):
+        import pdb; pdb.set_trace()
         self.assertEqual(checkout_solution.checkout('STXX'), 65)
+
 
 

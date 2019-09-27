@@ -86,28 +86,28 @@ def checkout(skus):
 
     # cut lowest priced first then others (XSTYZ)
     ngrp = ns + nt + nx + ny + nz
-    p += (ngrp/3) * 45
+    p += int(ngrp/3) * 45
     fgrp = ngrp % 3
-    if fgrp in (1,2):
-        while fgrp > 0:
-            if nz > 0:
-                p += 21
-                nz -= 1
-            elif ny > 0:
-                p += 20
-                ny -= 1
-            elif nt > 0:
-                p += 20
-                nt -= 1
-            elif ns > 0:
-                p += 20
-                ns -= 1
-            elif nx > 0:
-                p += 17
-                nx -= 1
-            fgrp -= 1
+    while fgrp > 0:
+        if nz > 0:
+            p += 21
+            nz -= 1
+        elif ny > 0:
+            p += 20
+            ny -= 1
+        elif nt > 0:
+            p += 20
+            nt -= 1
+        elif ns > 0:
+            p += 20
+            ns -= 1
+        elif nx > 0:
+            p += 17
+            nx -= 1
+        fgrp -= 1
 
     return int(p)
+
 
 
 
